@@ -3,7 +3,6 @@
 # This is a simple bash script that shows the offset to UTC from your current time zone 
 
  
-#note that can't have same day on different years as are not that many time zones  
 if [ $(date +%j)  -eq $(date -u +%j) ] ; then 
   echo " $(date  +%H) - $(date  -u +%H) "|bc
 #new years first because of otheruwise I can't use day number accuratly
