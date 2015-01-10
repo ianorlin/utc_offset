@@ -17,3 +17,4 @@ else
  echo " $(date +%H ) - $( date -u +%H) -24 "|bc
 
 fi 
+echo "for" $(date +%Z)
