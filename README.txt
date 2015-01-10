@@ -1,14 +1,13 @@
-This is a really simple script that I did to keep my bash skills up and yet provide an easy answer to people that need something. 
+This is a really simple script that I did to keep my bash skills up and yet provide an easy answer to people that need something. I have developed this for linux but have only looked at mac man pages and it may work there as bc and strftime have the same output at least in Mac OS 10.9.  
 
 I figured it might be useful for some because they do not know the difference to UTC when en irc 
-it returns the difference between your date and what happens next.
+it returns the difference between your time and UTC and shows the time zone of your current locale as a sanity check. When in irc I see people constantly ask the difference between UTC and there local time so figured might write a script so they can automate this themselves as it would be good practice for me easy enough to implement and yet helpful to others. 
 
-This can make it easier for new contributors to know when meetings on irc are and give them the number of hours they need to add or subtract.
 
 I am not sure it is year 2038 compliant for some 32 bit cpus but this should  work around end of unix epoch. Thinking more about this problem however if this does become a problem in year 2038 however it will fix itself once the timestamp overflows for both UTC and your local timezone so this bug will only exists for 12 hours on a day 23 years in the future from when I am updating this README.
 
-It should work locally on irc clients but does not really work in an irc bot as it would be the time zone the irc bot is in. 
+This script included would work better in an irc client but not really work if you put it in an irc bot as that would show the time from the bots locale.
 
-Random fact is I wrote this in a hosp ital waiting room. 
+Random fact is I wrote this in a hospital waiting room but have come back and continued to iterate on it. 
 
-Also TODO to get more testing on this script if you are on ubuntu or something similar is you can test and make sure it works on debian based systems with sudo dpkg-reconfigure tzdata to get to another time zone to test it out. But doing this on a productoin machine will make the time wrong. Changing the time zone this way is a lot easier than for example having a remote server in each time zone to test. 
+Also I have figured a way to test this script on debian based systems for time zones other than my own by running a virtual machine and then changing the time zone in that and a way to do this on all debian based systems is sudo dpkg-reconfigure tzdata. 
