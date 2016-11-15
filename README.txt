@@ -10,4 +10,4 @@ This script included would work better in an irc client but not really work if y
 
 Random fact is I wrote this in a hospital waiting room but have come back and continued to iterate on it. 
 
-Also I have figured a way to test this script on debian based systems for time zones other than my own by running a virtual machine and then changing the time zone in that and a way to do this on all debian based systems is sudo dpkg-reconfigure tzdata. 
+Also I have figured a way to test this script on debian based systems for time zones other than my own by running a virtual machine and then changing the time zone in that and a way to do this on all debian based systems is sudo dpkg-reconfigure tzdata looking back a year later I think that a container could also be quite useful for this to help coordinate for meetings.  
